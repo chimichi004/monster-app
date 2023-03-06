@@ -36,7 +36,7 @@ const App = () =>{
     <div className="App">
       <h1>Monster Roledex</h1>
       <SearchBox placeholder={'search monsters'} handleChange={handleChange} />
-      <CardList monsters={filterMonster}/>
+      <CardList monsters={monsters.filter(monster => monster.name.toLowerCase().includes(searchMonster.toLocaleLowerCase()))}/>
 
     </div>
   );
